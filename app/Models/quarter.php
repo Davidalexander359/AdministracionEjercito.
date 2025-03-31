@@ -13,4 +13,12 @@ class quarter extends Model
      //   'location' => 'Desconocida',  // Valor por defecto
     //];
     
+    public function companies()
+    {
+        return $this->belongToMany('app\Models\company');
+    }
+    public function soldier()
+    {
+        return $this->hasOne('app\Models\soldier');
+    }
 }

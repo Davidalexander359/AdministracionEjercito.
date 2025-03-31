@@ -10,4 +10,9 @@ class ArmyCorp extends Model
     use HasFactory;
 
     protected $fillable = ['denomination']; // <-- Agregar esta línea
+
+    public function soldier()
+    {
+        return $this->hasOne('app\Models\soldier');
+    }
 }
